@@ -7,8 +7,8 @@ from flask import redirect
 from flask import render_template
 from flask import session
 from flask.helpers import url_for
-from models import Lists, db
-from models import Users, Movies, get_recommend_movie_list
+from Project.models import Lists, db
+from Project.models import Users, Movies, get_recommend_movie_list
 import requests
 import json, csv
 from embedding_as_service_client import EmbeddingClient
