@@ -11,7 +11,6 @@ from models import Lists, db
 from models import Users, Movies, get_recommend_movie_list
 import requests
 import json, csv
-from tmdbv3api import Movie
 from embedding_as_service_client import EmbeddingClient
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import CountVectorizer
@@ -191,8 +190,11 @@ def create_app():
 
         return render_template('update.html')
 
+    return app
+
 
 
 if __name__ == "__main__":
     app = create_app()
+    breakpoint()
     app.run(debug=True)
