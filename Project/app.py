@@ -26,7 +26,8 @@ def create_app():
     app = Flask(__name__)
 
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///netflix.sqlite3'   
+    app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://tozjixhlxhsivp:e89e984f6706c772da62c15bec81ae724b49c17bbd75ec36f4809b4285bc0d1e@ec2-3-220-98-137.compute-1.amazonaws.com:5432/d386rtfhlf291s"
+    #'sqlite:///netflix.sqlite3'   
 
     app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
