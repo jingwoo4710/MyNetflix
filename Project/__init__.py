@@ -33,8 +33,8 @@ def create_app():
 
     db.init_app(app)
 
-    # with app.test_request_context():
-    #     db.create_all()
+    with app.test_request_context():
+        db.create_all()
         
 
 
@@ -139,9 +139,9 @@ def create_app():
 
     @app.route('/data/')
     def data():
-        db.drop_all()
+        # db.drop_all()
 
-        db.create_all()
+        # db.create_all()
 
         with open('Project/movie.csv', 'r') as f:
             reader = csv.reader(f)
