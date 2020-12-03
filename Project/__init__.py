@@ -33,8 +33,8 @@ def create_app():
 
     db.init_app(app)
 
-    with app.test_request_context():
-        db.create_all()
+    # with app.test_request_context():
+    #     db.create_all()
         
 
 
