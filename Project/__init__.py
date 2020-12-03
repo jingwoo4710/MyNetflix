@@ -24,8 +24,8 @@ def create_app():
     app = Flask(__name__)
 
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://tozjixhlxhsivp:e89e984f6706c772da62c15bec81ae724b49c17bbd75ec36f4809b4285bc0d1e@ec2-3-220-98-137.compute-1.amazonaws.com:5432/d386rtfhlf291s'   
-    # "postgres://tozjixhlxhsivp:e89e984f6706c772da62c15bec81ae724b49c17bbd75ec36f4809b4285bc0d1e@ec2-3-220-98-137.compute-1.amazonaws.com:5432/d386rtfhlf291s"
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://jzldammovjblxe:3786b05155a588f1097c298f227121cbb08740f95e6dca5df61498e7f9138d86@ec2-75-101-212-64.compute-1.amazonaws.com:5432/d55tm2dunhdufa'   
+    # "postgres://jzldammovjblxe:3786b05155a588f1097c298f227121cbb08740f95e6dca5df61498e7f9138d86@ec2-75-101-212-64.compute-1.amazonaws.com:5432/d55tm2dunhdufa"
     #'sqlite:///netflix.sqlite3'   
     app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
