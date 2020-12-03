@@ -143,7 +143,7 @@ def create_app():
 
         db.create_all()
 
-        with open('movie.csv', 'r') as f:
+        with open('Project/movie.csv', 'r') as f:
             reader = csv.reader(f)
             next(reader) 
             for data in reader:
