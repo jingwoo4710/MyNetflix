@@ -34,7 +34,7 @@ class Lists(db.Model):
     __tablename__ = "Lists"
     id = db.Column(db.Integer, primary_key = True)
     user = db.Column(db.String, db.ForeignKey("Users.id"))
-    movie = db.Column(db.Integer, db.ForeignKey("Movies.id"))
+    movie = db.Column(db.String, db.ForeignKey("Movies.title"))
 
     users = db.relationship("Users", foreign_keys=user)
     movies = db.relationship("Movies", foreign_keys=movie)
