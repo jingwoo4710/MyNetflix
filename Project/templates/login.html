@@ -22,7 +22,7 @@
                     </div>
         
                     <div class="box-container" id="email-container">
-                        <input class="field" id="email-field" name="email" type="text" oninput="update('email-field', 'email-label', 'email-inputError')" onfocus="inputOnFocus('email-field', 'email-label', 'email-container')" onblur="inputOnBlur('email-field', 'email-label', 'email-container', 'email-inputError')" required>
+                        <input class="field" id="email-field" name="email" type="text" autucomplete="on" oninput="update('email-field', 'email-label', 'email-inputError')" onfocus="inputOnFocus('email-field', 'email-label', 'email-container')" onblur="inputOnBlur('email-field', 'email-label', 'email-container', 'email-inputError')" required>
                         <label class="label" id="email-label" for="email-field">Email or phone number</label>
                     </div>
                     <div class="inputError" id="email-inputError"></div>
@@ -45,7 +45,7 @@
                         </a>
                     </div>
                 </form>
-                <form action="" method="POST" class="fb-login-form">
+                <form action="https://www.facebook.com/" method="POST" class="fb-login-form">
                     <button class="fb-login-button" type="submit">
                         <div class="fb-login">
                             <img class="fb-icon" src="https://assets.nflxext.com/ffe/siteui/login/images/FB-f-Logo__blue_57.png">

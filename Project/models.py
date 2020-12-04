@@ -1,6 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-import csv
 
 
 db = SQLAlchemy()
@@ -34,7 +33,7 @@ class Lists(db.Model):
     __tablename__ = "Lists"
     id = db.Column(db.Integer, primary_key = True)
     user = db.Column(db.String, db.ForeignKey("Users.id"))
-    movie = db.Column(db.String, db.ForeignKey("Movies.title"))
+    movie = db.Column(db.Integer, db.ForeignKey("Movies.id"))
 
     users = db.relationship("Users", foreign_keys=user)
     movies = db.relationship("Movies", foreign_keys=movie)
@@ -43,8 +42,6 @@ class Lists(db.Model):
         return "< id : {} -- Movie : {} >".format(self.id, self.movie)
 
 
-
-    
 
 def get_recommend_movie_list(df, movie_title, gerne_c_sim, top=30):
     # 특정 영화와 비슷한 영화를 추천해야 하기 때문에 '특정 영화' 정보를 뽑아낸다.

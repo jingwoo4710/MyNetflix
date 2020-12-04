@@ -58,7 +58,8 @@ body {
     color: whitesmoke;
     text-decoration: none;
     padding: 10px 15px;
-    font-size: 1.5rem;
+	font-size: 1.5rem;
+	transition: all .5s;
 }
 .menu .user img {
 	width: 2rem;
@@ -73,6 +74,31 @@ body {
 }
 .menu-right ul li {
 	padding-right: 1.5rem;
+}
+.menu ul li a:after,
+.menu ul li a:before {
+  transition: all .5s;
+}
+.menu ul li a:hover {
+	color: red;
+  }
+.menu ul li a {
+	position: relative;
+}
+.menu ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: red;
+  height: 1px;
+}
+.menu ul li a:hover:after {
+	width: 100%;
 }
 .banner {
 	height: 80%;
