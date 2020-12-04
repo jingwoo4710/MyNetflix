@@ -52,15 +52,11 @@ def login():
 
 # '/signout'
 @sign_routes.route('/signout', methods=['GET','POST'])  
-def register():
+def signout():
     if request.method == "POST":
         result = request.form
-        print(dict(result))
-        user = Users.query.get(result['email']) or Users(id = result['email'])
-        user.password = result['password']
-        user.movie = result['movie']
-        db.session.add(user)  
+        Users.query.filter(result['email']).delete()
         db.session.commit()
-        return redirect(url_for('sign_routes.login'))
+        return redirect(url_for('index_routes.index'))
     else:
-        return render_template('signup.html')
+        return render_template('signout.html')

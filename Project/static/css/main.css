@@ -119,10 +119,22 @@ img{
     position: absolute;
     left: 0;
     bottom: -8vh;
-    width: 454px;
+    width: 600px;
     height: 3rem;
     font-size: 1rem;
     padding-left: 0.5rem;
+}
+.showcase-content button{
+    height: 3.25rem;
+    width: 320px;
+    left: 20px;
+    text-align: center;
+    background-color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 2px;
+    color: white;
 }
 
 .btn{
@@ -152,11 +164,11 @@ img{
     position: absolute;
     right: 0;
     bottom: -8vh;
-    padding: 0.5rem 1.2rem;
-    font-size: 1.5rem;
+    padding: 0.6rem 6rem;
+    font-size: 1.36rem;
     text-transform: uppercase;
     height: 36px;
-    width: 14rem;
+    width: 15rem;
 }
 
 .card-0 , 
