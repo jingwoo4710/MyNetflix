@@ -55,8 +55,14 @@ def login():
 def signout():
     if request.method == "POST":
         result = request.form
-        Users.query.filter(result['email']).delete()
-        db.session.commit()
-        return redirect(url_for('index_routes.index'))
+        email = Users.query.with_entities(Users.id).filter(Users.id == result['email']).first()
+        password = Users.query.with_entities(Users.password).filter(Users.id == result['email']).first()        
+        print(email, password)
+
+        if (email[0] == result['email']) & (password[0] == result['password']):
+            user = Users.query.get(result['email'])
+            db.session.delete(user)
+            db.session.commit()
+            return redirect(url_for('index_routes.index'))
     else:
         return render_template('signout.html')
